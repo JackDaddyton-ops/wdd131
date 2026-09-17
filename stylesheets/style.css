@@ -1,0 +1,17 @@
+/*
+hex colors chosen from coolors.com
+310d20
+113537
+59A5D8
+F5DFBB
+4C2719
+*/
+
+body {
+    background-color: #f5dfbb;
+    color: #4C2719;
+}
+
+a {
+    color: #310D20;
+}
