@@ -1,0 +1,10 @@
+nav>ul {
+    display: flex;
+    list-style: none;
+    padding-left: 20%;
+    gap: 20px;
+}
+
+.sub-menu {
+    display: none;
+}
