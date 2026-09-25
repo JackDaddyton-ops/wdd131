@@ -9,9 +9,9 @@ function changeTheme() {
     let current = selectElem.value;
     if (current == 'dark') {
         logo.src = "../images/byui-logo-white.png";
-        body.style.backgroundColor = "#3A3A3A"
-        body.style.color = "#F1F1F1"
-        h2.style.color = "#F1F1F1"
+        body.style.backgroundColor = "#333"
+        body.style.color = "white"
+        h2.style.color = "#BCCFDF"
 
     } else {
         logo.src = "../images/byui-logo-blue.webp";
