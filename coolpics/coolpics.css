@@ -1,0 +1,48 @@
+.nunito-<uniquifier> {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    border: box;
+    background-color: #447FDC;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+h2 {
+    color: black;
+}
+
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 10px;
+    border: solid, 7px, white;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 4));
+}
+
+main {
+    background-color: #CCCCCC;
+
+
+}
+
+footer {
+    text-align: center;
+}
