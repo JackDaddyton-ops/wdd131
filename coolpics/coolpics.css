@@ -16,6 +16,7 @@ body {
 
 a {
     color: white;
+    cursor: pointer;
 }
 
 h2 {
@@ -26,7 +27,6 @@ img {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    margin: 10px;
     border: solid, 7px, white;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 4));
 }
@@ -44,10 +44,23 @@ footer {
 @media screen and (min-width: 600px) {
     .img-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr, 300px;
         gap: 10px;
+        justify-content: center;
+        margin: 0 auto;
     }
 
+    .menu-btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+    }
+
+    nav {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -56,6 +69,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
+
 }
 
 @media screen and (min-width: 1300px) {
@@ -63,5 +77,13 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        display: block;
     }
 }
