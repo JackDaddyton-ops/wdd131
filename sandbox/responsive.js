@@ -31,7 +31,8 @@ function addIndex() {
     scriptureElements.forEach(renderNumber);
 }
 function toggleMenu() {
-
+    navEl.classList.toggle("hide");
+    menuBtn.classList.toggle
 }
 document.querySelector(".menu-btn").addEventListener("click", toggleMenu)
 addIndex();
