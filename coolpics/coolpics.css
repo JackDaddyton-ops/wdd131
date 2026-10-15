@@ -29,6 +29,8 @@ img {
     object-fit: cover;
     border: solid, 7px, white;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 4));
+    display: block;
+    margin: 0 auto;
 }
 
 main {
@@ -41,7 +43,12 @@ footer {
     text-align: center;
 }
 
-@media screen and (min-width: 600px) {
+.img-grid {
+    max-width: 1000px;
+    margin: auto;
+}
+
+@media screen and (min-width: 700px) {
     .img-grid {
         display: grid;
         grid-template-columns: 1fr, 300px;
@@ -67,7 +74,6 @@ footer {
     .img-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
     }
 
 }
@@ -76,7 +82,6 @@ footer {
     .img-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
     }
 
     .menu-btn {

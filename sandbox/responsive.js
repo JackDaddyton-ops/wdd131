@@ -9,7 +9,8 @@ figure out what day it is
 update the display
 
 */
-
+const navEl = document.querySelector(".main-nav");
+const menuBtn = document.querySelector(".menu-btn");
 function displayWelcome() {
     const headerEl = document.querySelector("header");
     const dayIndex = new Date().getDay();
@@ -32,7 +33,7 @@ function addIndex() {
 }
 function toggleMenu() {
     navEl.classList.toggle("hide");
-    menuBtn.classList.toggle
+    menuBtn.classList.toggle("change");
 }
 document.querySelector(".menu-btn").addEventListener("click", toggleMenu)
 addIndex();
