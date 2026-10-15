@@ -1,3 +1,17 @@
+const navEl = document.querySelector("nav");
+const menuBtn = document.querySelector(".menu-btn");
+
+
+function toggleMenu() {
+    navEl.classList.toggle("hide");
+}
+document.querySelector(".menu-btn").addEventListener("click", toggleMenu)
+
+
+
+
+
+// For clicking on images
 const gallery = document.querySelector('.img-grid');
 const modal = document.querySelector('dialog');
 const modalImage = modal.querySelector('img');

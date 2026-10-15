@@ -69,26 +69,32 @@ dialog {
     background-color: rgba(0, 0, 0, .75);
 }
 
-@media screen and (min-width: 700px) {
-    .img-grid {
-        display: grid;
-        grid-template-columns: 1fr, 300px;
-        gap: 10px;
-        justify-content: center;
-        margin: 0 auto;
-    }
+.img-grid {
+    display: grid;
+    grid-template-columns: 1fr, 300px;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
 
-    .menu-btn {
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        color: white;
-        font-size: 20px;
-    }
+.menu-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
 
-    nav {
-        display: none;
-    }
+nav {
+    display: grid;
+}
+
+nav a {
+    padding: 15px;
+}
+
+nav.hide {
+    display: none;
 }
 
 @media screen and (min-width: 900px) {
@@ -111,5 +117,13 @@ dialog {
 
     nav {
         display: block;
+    }
+
+    nav.hide {
+        display: block;
+    }
+
+    nav a {
+        margin: 2%;
     }
 }
