@@ -24,8 +24,16 @@ figure img {
 dialog img {
     width: 90%;
     display: block;
-    margin: 20vh auto;
+    margin: 0;
+    border: none;
+    filter: none;
+    box-shadow: none;
+    height: auto;
+    max-width: 85vw;
+    max-height: 80vh;
+    object-fit: contain;
 }
+
 
 dialog {
     width: 100%;
