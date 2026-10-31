@@ -10,8 +10,12 @@ F5DFBB
 body {
     background-color: #f5dfbb;
     color: #4C2719;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
     color: #310D20;
+    padding: 10px;
 }
