@@ -1,0 +1,177 @@
+.amatic-sc-regular {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.amatic-sc-bold {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+header {
+    margin: 20px;
+    border-bottom: 2px solid #777;
+}
+
+#logo-and-name {
+
+    display: flex;
+    gap: 10px;
+    align-items: end;
+
+
+
+
+}
+
+#logo {
+    width: 120px;
+}
+
+h1 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4em;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7em;
+    color: #5EA6DF;
+    margin: 0;
+    padding-top: 10px;
+}
+
+#search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    gap: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#search-icon {
+    width: 30px;
+    height: 30px;
+    padding-left: 5px;
+    border-left: 1px solid #777;
+
+}
+
+input[type="search"] {
+    width: 90%;
+    height: 2em;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+.card-image {
+    margin: 0;
+    padding: 0;
+}
+
+input[type="button"] {
+    font-size: .8em;
+    width: 4em;
+    height: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+
+.recipe {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 4px;
+    width: auto;
+}
+
+.social {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.social * {
+    width: 3em;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+}
+
+.description {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    #logo-and-name {
+        justify-content: center;
+    }
+
+    .recipe {
+        height: 400px;
+    }
+
+    .recipe>* {
+        max-width: 45%;
+
+    }
+
+    .card-image {
+        object-fit: scale-down;
+        height: 100%;
+
+    }
+
+    .description {
+        display: block;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    .social {
+        width: auto;
+    }
+
+    #logo {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 6em;
+    }
+}
