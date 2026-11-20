@@ -90,13 +90,19 @@ const anotherSort = simpleList.sort(compareFn)
 
 console.log("Another Sort:", anotherSort);
 
-function searchList(list, searchTerm) {
-    function searchCallback(string) {
-        return string.toLowerCase().includes(searchTerm);
+function searchList(list, q) {
+
+    function searchCallback(hike) {
+        return (hike.name.toLowerCase().includes(q.toLowerCase()) ||
+            hike.description.toLowerCase().includes(q.toLowerCase()) ||
+            hike.tags.some((tag) => tag.toLowerCase().includes(q.toLowerCase()))
+        );
+
     }
     const filteredList = list.filter(searchCallback);
     return filteredList;
 
 }
-const filtered = searchList(simpleList, "b");
+const filtered = searchList(hikes, "al");
 console.log("Filtered List:", filtered);
+
