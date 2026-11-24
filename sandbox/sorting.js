@@ -106,3 +106,4 @@ function searchList(list, q) {
 const filtered = searchList(hikes, "al");
 console.log("Filtered List:", filtered);
 
+main();

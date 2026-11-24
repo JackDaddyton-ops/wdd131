@@ -321,7 +321,7 @@ function htmlTemplate(filteredList) {
 function firstTemplate(recipe) {
     let tagsList = ``
     for (let tag of recipe.tags) {
-        tagsList += `<input class="tag" type="button" value="${tag"}>`
+        tagsList += `<input class="tag" type="button" value="${tag}"}>`
     }
 
     let ratingDisplay = ""
