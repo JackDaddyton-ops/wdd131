@@ -321,7 +321,7 @@ function htmlTemplate(filteredList) {
 function firstTemplate(recipe) {
     let tagsList = ``
     for (let tag of recipe.tags) {
-        tagsList += `<input type="button" value=${tag}>`
+        tagsList += `<input class="tag" type="button" value="${tag"}>`
     }
 
     let ratingDisplay = ""
@@ -337,7 +337,7 @@ function firstTemplate(recipe) {
     //html template
     template = `
         <section class="recipe">
-            <img class="card-image" src="${recipe.image}">
+            <img class="card-image" src="${recipe.image}" alt="${recipe.name}">
             ${tagsList}
             <h2>${recipe.name}</h2>
             <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
@@ -350,7 +350,7 @@ function firstTemplate(recipe) {
 }
 
 //dectect button click and get search input
-document.querySelector('#search-icon').addEventListener('click', getInput);
+document.querySelector('#search-button').addEventListener('click', getInput);
 
 function main() {
     let randomInt = Math.floor(Math.random() * recipes.length);
