@@ -310,25 +310,32 @@ function getInput() {
 
 
 function htmlTemplate(filteredList) {
-    let template = ``
+    let totalTemplate = ``
     for (let recipe of filteredList) {
-        let tagsList = ``
-        for (let tag of recipe.tags) {
-            tagsList += `<input type="button" value=${tag}>`
-        }
+        totalTemplate += firstTemplate(recipe);
+    }
+    return totalTemplate;
+}
 
-        let ratingDisplay = ""
-        for (let i = 0; i < recipe.rating; i++) {
-            ratingDisplay += "⭐️"
-        }
-        for (let i = recipe.rating; i <= 4; i++) {
 
-            ratingDisplay += "☆"
+function firstTemplate(recipe) {
+    let tagsList = ``
+    for (let tag of recipe.tags) {
+        tagsList += `<input type="button" value=${tag}>`
+    }
 
-        }
+    let ratingDisplay = ""
+    for (let i = 0; i < recipe.rating; i++) {
+        ratingDisplay += "⭐️"
+    }
+    for (let i = recipe.rating; i <= 4; i++) {
 
-        //html template
-        template += `
+        ratingDisplay += "☆"
+
+    }
+
+    //html template
+    template = `
         <section class="recipe">
             <img class="card-image" src="${recipe.image}">
             ${tagsList}
@@ -339,20 +346,18 @@ function htmlTemplate(filteredList) {
         <p class="description">${recipe.description}</p>
         </section >
         `
-    }
     return template;
 }
 
 //dectect button click and get search input
 document.querySelector('#search-icon').addEventListener('click', getInput);
 
+function main() {
+    let randomInt = Math.floor(Math.random() * recipes.length);
+    let recipe = recipes[randomInt]
 
+    document.querySelector('#recipe-list').innerHTML = firstTemplate(recipe);
+    console.log("The length of recipes:")
+}
 
-
-//use search input as argument in function to filter which recipes to display
-
-//display recipes in a list with image, name, and rating
-
-//put recipe in html form
-
-//put each recipe in body
+main();
